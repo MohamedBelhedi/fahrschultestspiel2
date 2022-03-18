@@ -7,6 +7,7 @@
 //     alert("es funktioniert")
 
 // }
+function button(){
 class Modal{
     //constractor
     constructor(){
@@ -31,14 +32,16 @@ const closebtn=document.querySelector(".js-close-modal")
 // hier muss die modal funktion aufgerufen werden mut mit new
 const modal=new Modal()
 
-openbtn.addEventListener('click',function(event) {
+openbtn.addEventListener('click',function(e) {
+    aler("Hi")
     
+    e.preventDefault();
    modal.open();
-   event.preventDefault();
+
 })
-closebtn.addEventListener('click',function() {
-    event.preventDefault();
+closebtn.addEventListener('click',function(e) {
+    e.preventDefault();
    modal.close()
 })
 
-
+}

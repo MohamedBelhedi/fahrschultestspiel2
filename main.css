@@ -1,0 +1,129 @@
+body{
+
+    background:linear-gradient(-5.71deg,white 49.8%,transparent 50.2%),url("8.png");
+    background-repeat: no-repeat,no-repeat;
+background-position: center 100%;
+background-size: 100vw 10vw,cover;
+/* background-size: 100% 10%,cover; */
+height:37rem;
+
+}
+.modal{
+position: fixed; 
+top: 50%; 
+left: 50%;
+border:2px solid red;
+background-color: white;
+width:80%;
+max-width: 800px;
+box-shadow: 5px 5px black;
+padding: 20px;
+transform: translate(-50%,-50%);
+display: none;
+z-index: 20px;
+}
+.img{
+    position: center; 
+    top:70%;
+    left:70%;
+    width:80%;
+    max-width: 800px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow:7px 7px 2 black;
+    margin-left:70px;
+    
+
+}
+.js-close-modal{
+
+
+    cursor: pointer;
+}
+.btn1{
+
+width:260px;
+height: 150px;
+font-size:30px;
+border-radius:30px;
+box-shadow: 5px 5px 6px 8px #888888;
+margin-left:500px;
+margin: 230px;
+cursor: pointer;
+animation: logo-fly-in 4s ease-in-out;
+padding: 0px;
+/* schweben 4s  ease-in-out 6s infinite none;
+z-index: -20px; */
+
+
+
+}
+
+.satz{
+
+text-align: center;
+/* position: relative; */
+margin: 10px;
+padding: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+font-weight: 400;
+
+
+}
+
+.btn1:hover{
+
+background-color:green;
+width:50%;
+/* height:-100%; */
+transition: width 2s;
+
+/* transition: height 2s; */
+
+
+}
+
+.ueberschrift1{
+
+
+   
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 50px;
+font-weight: 400;   
+
+
+}
+
+@keyframes schweben{
+0%,100%{
+transform: translate(0,0)
+
+}
+25%{
+transform: translate(0,-10px)
+
+}
+50%{
+transform: translate(0,10px)
+
+}
+75%{
+transform: translate(0,-5px) scale(1.1)
+
+}
+}
+
+@keyframes logo-fly-in{
+0%{
+transform: translate(-60vw,0);
+
+
+
+}
+100%{
+transform:translate(0,0);
+
+}
+} 
