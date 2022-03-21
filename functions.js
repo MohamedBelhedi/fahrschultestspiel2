@@ -33,7 +33,7 @@ const closebtn=document.querySelector(".js-close-modal")
 const modal=new Modal()
 
 openbtn.addEventListener('click',function(e) {
-    aler("Hi")
+
     
     e.preventDefault();
    modal.open();

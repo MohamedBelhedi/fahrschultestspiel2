@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Tech am KFZ für Fahrschule</title>
+    <title id="name2">Fahrschulspieltest Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="alert/dist/alertify.min.js"></script>
+    <link rel="stylesheet" href="alert/dist/alertify.core.css" />
+    <link rel="stylesheet" href="alert/dist/alertify.default.css" id="toggleCSS" />
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -15,12 +26,16 @@
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
+        
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Tech am KFZ für Fahrschule</div>
+        <div id="name"></div>
+        <div id="unity-build-title">Fahrschulspieltest Demo</div>
+        
+        
       </div>
     </div>
     <script>
@@ -30,6 +45,7 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
+  
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -37,10 +53,13 @@
       // Modify or remove this function to customize the visually presented
       // way that non-critical warnings and error messages are presented to the
       // user.
+
+  
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
+ 
         var div = document.createElement('div');
         div.innerHTML = msg;
         warningBanner.appendChild(div);
@@ -51,8 +70,11 @@
             warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
+                  
+ 
         }
         updateBannerVisibility();
+        
       }
 
       var buildUrl = "Build";
@@ -67,6 +89,7 @@
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
+
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -87,6 +110,8 @@
       }
       loadingBar.style.display = "block";
 
+    
+
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -96,12 +121,56 @@
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
+            
           };
+          
+        
         }).catch((message) => {
           alert(message);
         });
+        
       };
       document.body.appendChild(script);
+  
+     setTimeout(function(){
+      var name2 = document.getElementById("name");
+       
+ 
+  
+    function nameeingabe(){
+      // var name1=prompt("Gib dein name ein")
+      var value='Mohamed'
+      var name1=alertify.prompt('Prompt Message', 'Prompt Value'
+               , function(evt, value) { alertify.success('You entered: ' + value) });
+ 
+    var name2 = document.getElementById("name");
+  
+    name2.innerText=' heißt dich '+name1+' Willkommen viel Spaß'
+    name2.style.color="red";
+    name2.style.fontSize='30px'
+    name2.style.fontWeight='bold'
+  
+
+  
+
+};   
+
+nameeingabe();
+     },2000)
+    
+
+
+
+
+ 
+
+
+     
+
+
+   
     </script>
+  
+
   </body>
 </html>
