@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title id="name2">Fahrschulspieltest Demo</title>
+    <title>Fahrschulspieltest Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
@@ -33,6 +33,7 @@
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="name"></div>
+        <div id="name2"></div>
         <div id="unity-build-title">Fahrschulspieltest Demo</div>
         
         
@@ -133,22 +134,47 @@
       document.body.appendChild(script);
   
      setTimeout(function(){
-      var name2 = document.getElementById("name");
+    
        
  
   
     function nameeingabe(){
-      // var name1=prompt("Gib dein name ein")
-      var value='Mohamed'
-      var name1=alertify.prompt('Prompt Message', 'Prompt Value'
-               , function(evt, value) { alertify.success('You entered: ' + value) });
+      var name1=prompt("Gib dein name ein")
+      var date=new Date;
+      // var value='Mohamed'
+      // var name1=alertify.prompt('Prompt Message', 'Prompt Value'
+      //          , function(evt, value) { alertify.success('You entered: ' + value) });
  
     var name2 = document.getElementById("name");
-  
+     var schrift=document.getElementById('name2');
+     var Zeit=date.getHours();
+   
+     const wort='Heute ist....'
+      // var Datum2=datum.getHours();
+ 
     name2.innerText=' heißt dich '+name1+' Willkommen viel Spaß'
     name2.style.color="red";
     name2.style.fontSize='30px'
     name2.style.fontWeight='bold'
+    
+     if(Zeit<=18)
+    
+     {
+      schrift.style.color="green"
+    schrift.innerHTML="<h2>Guten Abend es ist </h2>"+Zeit+"<h2>Uhr</h2>"
+
+     }else
+     {
+      schrift.style.color="green"
+    schrift.innerHTML="<h2>Guten Morgen es ist </h2>"+Zeit+"<h2>Uhr</h2>"
+     }
+     
+     ;
+ 
+
+    // Wenn stunden x dann Guten Morgen wenn Stunde y dann Guten Tag wenn Stunde Z dann Abend
+    
+    
   
 
   
