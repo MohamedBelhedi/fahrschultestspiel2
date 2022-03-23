@@ -148,20 +148,25 @@
     var name2 = document.getElementById("name");
      var schrift=document.getElementById('name2');
      var Zeit=date.getHours();
+     var Minuten=date.getMinutes();
    
-     const wort='Heute ist....'
       // var Datum2=datum.getHours();
  
     name2.innerText=' heißt dich '+name1+' Willkommen viel Spaß'
     name2.style.color="red";
     name2.style.fontSize='30px'
     name2.style.fontWeight='bold'
+    name2.style.textAlign="center"
     
      if(Zeit>18&&Zeit>12)
     
      {
-      schrift.style.color="green"
-    schrift.innerHTML="<h2>Guten Abend es ist </h2>"+Zeit+"<h2>Uhr</h2>"
+      schrift.style.color="black"
+     
+      schrift.style.fontSize="15px"
+     
+      schrift.innerHTML="<h2>Guten Abend es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
+      schrift.style.textAlign="center"
 
      }
      
@@ -169,7 +174,7 @@
 
 
       schrift.style.color="green"
-    schrift.innerHTML="<h2>Guten Tag es ist </h2>"+Zeit+"<h2>Uhr</h2>"
+    schrift.innerHTML="<h2>Guten Tag es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
 
 
      }
