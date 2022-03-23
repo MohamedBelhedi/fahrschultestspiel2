@@ -96,6 +96,14 @@ font-weight: 400;
 
 }
 
+.footer{
+
+    align-items: center;
+    text-align: center;
+    position: inherit;
+
+}
+
 @keyframes schweben{
 0%,100%{
 transform: translate(0,0)
@@ -199,6 +207,15 @@ transform:translate(0,0);
             
             
             }
+            .footer{
+
+                align-items: center;
+                text-align: center;
+                position: inherit;
+                align-content: space-between;
+            
+            }
+            
         
 
 
