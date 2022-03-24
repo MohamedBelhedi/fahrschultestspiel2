@@ -21,9 +21,8 @@ function infosSpende()
     }else
     
     {
-
-        return false;
-
+        alert("Ok Dank Viel Spaß mit dem Spiel schön lernen")
+        
 
     }
 
