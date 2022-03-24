@@ -1,6 +1,6 @@
 body{
 
-    background:linear-gradient(-5.71deg,white 49.8%,transparent 50.2%),url("8.png");
+    background:linear-gradient(-5.71deg,white 49.8%,transparent 50.2%),url("./TemplateData/8.png");
     background-repeat: no-repeat,no-repeat;
 background-position: center 100%;
 background-size: 100vw 10vw,cover;
@@ -151,6 +151,7 @@ transform:translate(0,0);
         background-color: white;
         width:60%;
         max-width: 300px;
+        max-height: 400px;
         box-shadow: 5px 5px black;
         padding: 20px;
         transform: translate(-50%,-50%);
