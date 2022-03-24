@@ -178,15 +178,26 @@
 
 
      }
+     else if(Zeit<=23)
+     {
+
+      schrift.style.color="green"
+    schrift.innerHTML="<h2>schlafen geht Jetzt es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
+   
+      setTimeout(function(){
+
+        alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+        
+      
+        window.close();    },2000)
+
+     
+
+     }
      else
      {
       schrift.style.color="green"
-<<<<<<< HEAD
     schrift.innerHTML="<h2>Guten Morgen es ist </h2>"+Zeit+":"+Minuten+"<h2>Uhr</h2>"
-=======
-    schrift.innerHTML="<h2>Guten Morgen es ist </h2>"+Zeit+':' +Minuten+"<h2>Uhr</h2>"
-    schrift.style.textAlign="center"
->>>>>>> 2e12ee443c37339e2d0d870e086c752a949357af
      }
      
      ;
