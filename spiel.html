@@ -6,17 +6,8 @@
     <title>Fahrschulspieltest Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-<!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-<!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
-<!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <script src="alert/dist/alertify.min.js"></script>
-    <link rel="stylesheet" href="alert/dist/alertify.core.css" />
-    <link rel="stylesheet" href="alert/dist/alertify.default.css" id="toggleCSS" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -132,19 +123,53 @@
         
       };
       document.body.appendChild(script);
+      function PopUP()
+      {
+
+        Swal.fire({
+  title: "willkommen",
+  text: "",
+  type: "danger",
+  showCancelButton: true,
+  confirmButtonText: "Yes, delete it!",
+  closeOnConfirm: false
+},
+function(isConfirmed){
+  event.preventDefault();
+  if(isConfirmed)
+  
+  {
+
+    e.preventDefault()
+
+    return true;
+
+
+  }else
+  {
+
+    window.open("https://www.google.de");
+
+  };
+});
+
+
+      }
+     
   
      setTimeout(function(){
     
-       
- 
+      
   
     function nameeingabe(){
-      var name1=prompt("Gib dein name ein")
+
+  
+      const name1=prompt("Gib dein name ein")
+      
       var date=new Date;
       // var value='Mohamed'
-      // var name1=alertify.prompt('Prompt Message', 'Prompt Value'
-      //          , function(evt, value) { alertify.success('You entered: ' + value) });
- 
+   
+     
     var name2 = document.getElementById("name");
      var schrift=document.getElementById('name2');
      var Zeit=date.getHours();
@@ -178,18 +203,27 @@
 
 
      }
-     else if(Zeit>=23)
+     else if(Zeit<=23)
      {
 
       schrift.style.color="green"
     schrift.innerHTML="<h2>schlafen geht Jetzt es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
    
-      setTimeout(function(){
+    Swal.fire(
+  'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
+  'Danke',
+  'Guten Nacht'
+)
+ 
+    
+    setTimeout(function(){
 
-        alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+        // alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+
         
-      
-        window.close();    },2000)
+
+        window.close();    
+      },2000)
 
      
 
@@ -213,6 +247,7 @@
 };   
 
 nameeingabe();
+PopUP();
      },2000)
     
 
