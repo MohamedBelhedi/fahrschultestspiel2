@@ -131,12 +131,13 @@
   text: "",
   type: "danger",
   showCancelButton: true,
-  confirmButtonText: "Yes, delete it!",
+  confirmButtonText: "Ja",
+  cancelButtonText:'Nein',
   closeOnConfirm: false
 },
-function(isConfirmed){
+function(e){
   event.preventDefault();
-  if(isConfirmed)
+  if(Swal)
   
   {
 
