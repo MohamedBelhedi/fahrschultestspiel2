@@ -96,16 +96,26 @@ font-weight: 400;
 
 }
 
-.footer{
+.footer,.datenschutz{
 
     align-items: center;
     text-align: center;
     position: inherit;
+    align-content: space-between;
+    font-size: 20px;
+    text-decoration: none;
+    margin:5px;
+    text-shadow: 5px 8px 6px rgba(12, 1, 71, 0.651);
+    color:rgb(69, 127, 129);
+   
+    
 
 }
 
 .btn{
 margin:30px;
+box-shadow: 5px 5px black;
+
 }
 
 @keyframes schweben{
@@ -218,6 +228,7 @@ transform:translate(0,0);
                 text-align: center;
                 position: inherit;
                 align-content: space-between;
+                box-shadow: 5px 5px black;
             
             }
             
