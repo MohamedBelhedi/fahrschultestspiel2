@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=960 height=600 onclick="npcRoll()"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -123,42 +123,47 @@
         
       };
       document.body.appendChild(script);
-      function PopUP()
-      {
-
-        Swal.fire({
-  title: "willkommen",
-  text: "",
-  type: "danger",
-  showCancelButton: true,
-  confirmButtonText: "Ja",
-  cancelButtonText:'Nein',
-  closeOnConfirm: false
-},
-function(e){
-  event.preventDefault();
-  if(Swal)
-  
-  {
-
-    e.preventDefault()
-
-    return true;
-
-
-  }else
-  {
-
-    window.open("https://www.google.de");
-
-  };
-});
-
-
-}
+    
      
+     
+      function  npcRoll()
+     {
+
+
+      var message=confirm('Möchtest du das Spiel wirklich Spielen')
+      event.preventDefault();
+
+      {
+        if(message)
+        {
+
+          event.preventDefault();
+          return true
+
+
+
+        }else
+        
+        {
+
+          window.close();
+
+
+        }
+
+
+
+      }
+
+
+     }
+      
+   
+     
+
   
      setTimeout(function(){
+       
     
       
   
@@ -201,10 +206,11 @@ function(e){
 
       schrift.style.color="green"
     schrift.innerHTML="<h2>Guten Tag es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
+    
 
 
      }
-     else if(Zeit<23)
+     else if(Zeit>=23)
      {
 
       schrift.style.color="green"
@@ -214,20 +220,21 @@ function(e){
  
     
     setTimeout(function(){
+      
 
-        alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+        // alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
 
-//         function fire()
-//    {
-//     Swal.fire(
-//   'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
-//   'Danke',
-//   'Guten Nacht'
-// )
+        function fire()
+   {
+    Swal.fire(
+  'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
+  'Danke',
+  'Guten Nacht'
+)
    
 
 
-//    }  
+   }  
  
      
    window.close(); 
@@ -243,8 +250,7 @@ function(e){
       schrift.style.color="green"
     schrift.innerHTML="<h2>Guten Morgen es ist </h2>"+Zeit+":"+Minuten+"<h2>Uhr</h2>"
      }
-     
-     ;
+  
  
 
     // Wenn stunden x dann Guten Morgen wenn Stunde y dann Guten Tag wenn Stunde Z dann Abend
@@ -257,8 +263,8 @@ function(e){
 };   
 
 nameeingabe();
-fire();
-PopUP();
+
+
      },2000)
     
 
