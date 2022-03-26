@@ -155,7 +155,7 @@ function(e){
 });
 
 
-      }
+}
      
   
      setTimeout(function(){
@@ -204,26 +204,35 @@ function(e){
 
 
      }
-     else if(Zeit<=23)
+     else if(Zeit<23)
      {
 
       schrift.style.color="green"
     schrift.innerHTML="<h2>schlafen geht Jetzt es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
-   
-    Swal.fire(
-  'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
-  'Danke',
-  'Guten Nacht'
-)
+  
+
  
     
     setTimeout(function(){
 
-        // alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+        alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
+
+//         function fire()
+//    {
+//     Swal.fire(
+//   'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
+//   'Danke',
+//   'Guten Nacht'
+// )
+   
+
+
+//    }  
+ 
+     
+   window.close(); 
 
         
-
-        window.close();    
       },2000)
 
      
@@ -248,6 +257,7 @@ function(e){
 };   
 
 nameeingabe();
+fire();
 PopUP();
      },2000)
     
