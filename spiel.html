@@ -11,7 +11,9 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 onclick="npcRoll()"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 
+      
+      ></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -47,7 +49,7 @@
       // user.
 
   
-      function unityShowBanner(msg, type) {
+      const unityShowBanner=(msg, type)=> {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
@@ -89,19 +91,33 @@
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+const screenWidth=window.innerWidth<800
+      if (/iPhone|iPod|Android/i.test(navigator.userAgent)|screenWidth) {
         container.className = "unity-mobile";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
+
+        Swal.fire({text:"funktioniert nicht für Mobile Geräte,ausgenommen Tablets,Spiel bitte das Spiel auf dem PC/Laptop oder Tablet "})
+        
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
+        setTimeout(()=>{
+          window.location.assign("https://mohamedbelhedi.github.io/portfolioreact")
+
+        },5000)
+        
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
       }
+    
+        
       loadingBar.style.display = "block";
+      
 
+
+    
+     
     
 
       var script = document.createElement("script");
@@ -126,48 +142,18 @@
     
      
      
-      function  npcRoll()
-     {
-
-
-      var message=confirm('Möchtest du das Spiel wirklich Spielen')
-      event.preventDefault();
-
-      {
-        if(message)
-        {
-
-          event.preventDefault();
-          return true
-
-
-
-        }else
-        
-        {
-
-          window.close();
-
-
-        }
-
-
-
-      }
-
-
-     }
+    
       
    
      
 
   
-     setTimeout(function(){
+     setTimeout(()=>{
        
     
       
   
-    function nameeingabe(){
+    const nameeingabe=()=>{
 
   
       const name1=prompt("Gib dein name ein")
@@ -201,7 +187,7 @@
 
      }
      
-     else if(Zeit>12){
+     else if(Zeit<=12){
 
 
       schrift.style.color="green"
@@ -210,37 +196,34 @@
 
 
      }
-     else if(Zeit>=23)
+     else if(Zeit===23)
      {
 
       schrift.style.color="green"
     schrift.innerHTML="<h2>schlafen geht Jetzt es ist </h2>"+Zeit+':'+Minuten+"<h2>Uhr</h2>"
   
 
- 
+    Swal.fire({
+ text: 'Bitte Schalfen gehen es ist spät, Morgen Geht es weiter, das Fenster wird in 20 Sek geschlossen\
+  Danke Guten Nacht'})
+
+
+
+
+   
     
-    setTimeout(function(){
+    setTimeout(()=>{
       
 
         // alert('Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen');
 
-        function fire()
-   {
-    Swal.fire(
-  'Schalfen gehen, Morgen Geht es weiter, das Fenter Wird Geschlossen',
-  'Danke',
-  'Guten Nacht'
-)
-   
-
-
-   }  
+ 
  
      
    window.close(); 
 
         
-      },2000)
+      },20000)
 
      
 
@@ -265,7 +248,10 @@
 nameeingabe();
 
 
+
      },2000)
+
+     
     
 
 
